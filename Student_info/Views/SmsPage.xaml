@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Student_info.Views.SmsPage">
+    <ContentPage.Content>
+        <Frame  BackgroundColor="#ff7f50" Margin="30,30,30,30" CornerRadius="30" >
+            <StackLayout HorizontalOptions="CenterAndExpand" >
+
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Label Text="Odbiorca" TextColor="White" FontSize="15" />
+                    <Entry Text="{Binding Recipent}" Keyboard="Telephone"/>
+                    <Label Text="Wiadomość" TextColor="White" FontSize="15" />
+                    <Editor Text="{Binding Message}" HeightRequest="100" />
+
+                    <Button Text="Wyślij wiadomość" 
+                        Command="{Binding SendCommand}"
+                        Margin="20,0,20,0" 
+                        BorderRadius ="23"
+                         HeightRequest="50" 
+                         TextColor="White"
+                        BackgroundColor="Gray"
+                         HorizontalOptions="FillAndExpand"
+                        />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

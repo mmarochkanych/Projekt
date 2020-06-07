@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Student_info.Views.NewItemPage"
+             Title="Nowy student">
+  
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Anuluj" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Zapisz" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="#ff7f50" Margin="10,10,10,10" >
+                <StackLayout Spacing="20" Padding="15" >
+                    <Label Text="Zdjęcie:" FontSize="Medium"   FontAttributes="Bold"/>
+                    <Editor Text="{Binding Item.ImgUrl}" Placeholder="Podaj link obrazka"  FontAttributes= "Italic" FontSize="Small"/>
+                    <Label Text="Imię:" FontSize="Medium" FontAttributes="Bold"/>
+                    <Editor Text="{Binding Item.FName}" Placeholder="Wprowadź imię" TextColor="White"  FontSize="Small" />
+                    <Label Text="Nazwisko:" FontSize="Medium"  FontAttributes="Bold" />
+                    <Editor Text="{Binding Item.LName}" Placeholder="Wprowadź nazwisko" FontAttributes= "Italic"  FontSize="Small" Margin="0" />
+                    <Label Text="NrAlbumu:" FontSize="Medium"  FontAttributes="Bold" />
+                    <Editor Text="{Binding Item.Index}" Placeholder="Wprowadź numer albumu" FontAttributes= "Italic" FontSize="Small" Margin="0" />
+                    <Label Text="Płeć:" FontSize="Medium"  FontAttributes="Bold" />
+                    <Editor Text="{Binding Item.Gender}" Placeholder="Wprowadź płeć" FontAttributes= "Italic" FontSize="Small" Margin="0" />
+                    <Label Text="Email:" FontSize="Medium"   FontAttributes="Bold" />
+                    <Editor Text="{Binding Item.Email}" Placeholder="Wprowadź email" FontAttributes= "Italic" FontSize="Small" Margin="0" />
+                    <Label Text="Hasło:" FontSize="Medium"  FontAttributes="Bold" />
+                    <Editor Text="{Binding Item.Password}" Placeholder="Wprowadź hasło"  FontAttributes= "Italic" FontSize="Small" Margin="0" />
+                    <Label Text="Numer telefonu:" FontSize="Medium"  FontAttributes="Bold" />
+                    <Editor Text="{Binding Item.TelNumber}" Placeholder="Wprowadź numer telefonu" FontAttributes= "Italic" FontSize="Small" Margin="0" />
+        </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+   
+</ContentPage>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Student_info.Views.LoginPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="primary">#ff7f50</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="6" >
+                <StackLayout>
+
+                    <Image
+                        Source="school.png"
+                        HeightRequest="250"
+                        Aspect="AspectFit"
+                    />
+
+                </StackLayout>
+
+                <StackLayout>
+                    <Entry  Margin="20,20,20,0" 
+                            
+                         HeightRequest="55" 
+                         Text="{Binding Email}"
+                         Placeholder="Wprowadź  swój email...">
+
+                </Entry>
+
+
+                    <Entry x:Name="password"
+                        Margin="20,0,20,0" 
+                        HeightRequest="55" 
+                        Text="{Binding Password}"
+                        IsPassword="true"
+                        Placeholder="Wprowadź swoje haslo...">
+                </Entry>
+                </StackLayout>
+
+
+                <Button  x:Name="login"
+                         BorderRadius ="23"
+                         BackgroundColor= "{StaticResource primary}"
+                         Margin="20,30,20,0" 
+                         HeightRequest="50" 
+                         TextColor="White" 
+                          Clicked= "Btn_Login_CLicked"
+                         Text="Zaloguj"  
+                         
+                         HorizontalOptions="FillAndExpand"/>
+
+                <Button Margin="20,0,20,0" 
+                        BorderRadius ="23"
+                         HeightRequest="50" 
+                         TextColor="White"
+                         Text="Zarejestruj" 
+                        Clicked= "Btn_Reg_CLicked"
+                         BackgroundColor="Gray"
+                         HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:local="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             mc:Ignorable="d"
+             x:Class="Student_info.Views.ItemDetailPage"
+             Title="{Binding Title}">
+    <ScrollView>
+        <Frame  BackgroundColor="#ff7f50" Margin="30,30,30,30" CornerRadius="30" >
+            
+                <StackLayout Spacing="8"   HorizontalOptions="CenterAndExpand"  >
+                <Frame BorderColor="#ff7f50" CornerRadius= "100">                    <ffimageloading:CachedImage  Source = "{Binding Item.ImgUrl}" 
+
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+			   WidthRequest="100" 
+               HeightRequest="100"/>
+                </Frame>
+                <Label Text="DANE STUDENTA" TextColor="White"  HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"/>
+                <Label Text="{Binding Item.FName}" d:Text="Imię" 
+                       FontSize="Small" 
+                       FontAttributes="Bold"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding Item.LName}" 
+                   d:Text="Nazwisko:" 
+                        FontAttributes="Bold"
+                   FontSize="Small"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding Item.Index}" 
+                       d:Text="Nr Albumu:" 
+                       FontSize="Small"  
+                        FontAttributes="Bold"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding Item.Gender}" 
+                       d:Text="Płeć:"
+                       FontSize="Small"  
+                        FontAttributes="Bold"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding Item.Email}" 
+                       d:Text="Email:"
+                        FontAttributes="Bold"
+                       FontSize="Small"  
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="StartAndExpand"/>
+                <Label Text="{Binding Item.TelNumber}" 
+                       d:Text="Numer telefonu:"
+                      
+                       FontAttributes="Bold"
+                       FontSize="Small"  
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="StartAndExpand"/>
+                
+        </StackLayout>
+        </Frame>
+    </ScrollView>
+</ContentPage>
