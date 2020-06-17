@@ -18,8 +18,8 @@ namespace Student_info.Views
         {
             InitializeComponent();
             BindingContext = viewModel = new ItemsViewModel();
-
         }
+
         async void Btn_Reg_CLicked(object sender, System.EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));

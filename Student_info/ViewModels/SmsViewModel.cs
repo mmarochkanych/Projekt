@@ -43,7 +43,7 @@ namespace Student_info.ViewModels
             {
                 if (string.IsNullOrEmpty(Recipent))
                 {
-                    
+
                     await UserDialogs.Instance.AlertAsync("Podaj odbiorce");
                     return;
                 }
@@ -77,6 +77,5 @@ namespace Student_info.ViewModels
 
 
     }
-
 }
 

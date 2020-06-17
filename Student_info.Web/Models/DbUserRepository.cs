@@ -45,7 +45,6 @@ namespace Student_info.Web.Models
             itemupd.FName = item.FName;
             itemupd.LName = item.LName;
             itemupd.Index = item.Index;
-            itemupd.Email = item.Email;
             itemupd.Gender = item.Gender;
             itemupd.Email= item.Email;
             itemupd.Password = item.Password;

@@ -38,7 +38,7 @@
                         HeightRequest="55" 
                         Text="{Binding Password}"
                         IsPassword="true"
-                        Placeholder="Wprowadź swoje haslo...">
+                        Placeholder="Wprowadź swoje hasło...">
                 </Entry>
                 </StackLayout>
 
@@ -46,11 +46,13 @@
                 <Button  x:Name="login"
                          BorderRadius ="23"
                          BackgroundColor= "{StaticResource primary}"
+                         Command ="{Binding SendCommand}"
                          Margin="20,30,20,0" 
                          HeightRequest="50" 
                          TextColor="White" 
                           Clicked= "Btn_Login_CLicked"
                          Text="Zaloguj"  
+                        
                          
                          HorizontalOptions="FillAndExpand"/>
 

@@ -13,7 +13,7 @@ namespace Student_info
         //To debug on Android emulators run the web backend against .NET Core not IIS
         //If using other emulators besides stock Google images you may need to adjust the IP address
         public static string AzureBackendUrl =
-            DeviceInfo.Platform == DevicePlatform.Android ? "https://192.168.0.109:45455" : "https://localhost:44300";
+            DeviceInfo.Platform == DevicePlatform.Android ? "https://192.168.0.109:45456" : "https://localhost:44300";
         public static bool UseMockDataStore = false;
 
         public App()
